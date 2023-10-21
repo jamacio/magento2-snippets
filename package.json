@@ -5,6 +5,14 @@
   "icon": "images/icon.png",
   "publisher": "Jamacio Rocha",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamacio/magento2-snippets/issues"
+  },
+  "homepage": "https://github.com/jamacio/magento2-snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamacio/magento2-snippets.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.83.0"
