@@ -1,12 +1,7 @@
 {
   "__construct": {
     "prefix": "m2.__construct",
-    "body": [
-      "public function __construct(\\${1:parameters})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["public function __construct(${1:parameters})", "{", "\t$0", "}"],
     "description": "Constructor"
   },
   "echo": {
@@ -16,12 +11,12 @@
   },
   "foreach": {
     "prefix": "m2.foreach",
-    "body": ["foreach ($1 as \\${2:item}) {", "\t$0", "}"],
+    "body": ["foreach ($1 as ${2:item}) {", "\t$0", "}"],
     "description": "foreach(iterable_expr as $value) {...}"
   },
   "foreach_k": {
     "prefix": "m2.foreach_k",
-    "body": ["foreach ($1 as \\${2:key} => \\${3:index}) {", "\t$0", "}"],
+    "body": ["foreach ($1 as ${2:key} => ${3:index}) {", "\t$0", "}"],
     "description": "foreach(iterable_expr as $key => $value) {...}"
   },
   "include": {
