@@ -4,13 +4,6 @@
 
 Welcome to the Magento 2 Snippets extension for Visual Studio Code! This extension is designed to streamline the development process in Magento 2 by providing a collection of code snippets that simplify common tasks. Whether you're a beginner or an experienced Magento 2 developer, these snippets will save you time and boost your productivity.
 
-## Features
-
-- A comprehensive set of Magento 2 code snippets for common functions and structures.
-- Snippets for creating modules, controllers, blocks, models, layouts, and more.
-- Easily customizable snippets to match your preferred coding style.
-- Regular updates in line with the latest best practices of Magento 2.
-
 ## Installation
 
 1. Open Visual Studio Code.
