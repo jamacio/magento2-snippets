@@ -1,9 +1,9 @@
 {
-  "name": "magento2-snippets",
+  "name": "magento2snippets",
   "displayName": "Magento2 snippets",
   "description": "A collection of Magento 2 snippets",
   "icon": "images/icon.png",
-  "publisher": "Jamácio Rocha",
+  "publisher": "JamacioRocha",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jamacio/magento2-snippets/issues"
