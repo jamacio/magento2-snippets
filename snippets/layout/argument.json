@@ -1,0 +1,15 @@
+{
+  "arguments": {
+    "prefix": "m2.layout.args",
+    "body": ["<arguments>", "\t$0", "</arguments>"],
+    "description": "Add arguments"
+  },
+
+  "argument": {
+    "prefix": "m2.layout.arg",
+    "body": [
+      "<argument name=\"${1:name}\" xsi:type=\"${2|array,boolean,number,null,object,string|}\">$3</argument>$0"
+    ],
+    "description": "Add an argument"
+  }
+}

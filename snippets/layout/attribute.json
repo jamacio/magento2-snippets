@@ -1,0 +1,115 @@
+{
+  "translate": {
+    "prefix": "m2.layout.attr.translate",
+    "body": ["translate=\"${2|false,true|}\""],
+    "description": "Translate attribute"
+  },
+
+  "xsi:type": {
+    "prefix": "m2.layout.attr.xsi:type",
+    "body": ["xsi:type=\"${2|array,boolean,number,null,object,string|}\""],
+    "description": "xsi:type attribute"
+  },
+
+  "handle": {
+    "prefix": "m2.layout.attr.handle",
+    "body": ["handle=\"$1\"$0"],
+    "description": "Handle attribute"
+  },
+
+  "destination": {
+    "prefix": "m2.layout.attr.destination",
+    "body": ["destination=\"$1\"$0"],
+    "description": "Destination attribute"
+  },
+
+  "element": {
+    "prefix": "m2.layout.attr.element",
+    "body": ["element=\"$1\"$0"],
+    "description": "Element attribute"
+  },
+
+  "htmlid": {
+    "prefix": "m2.layout.attr.htmlId",
+    "body": ["htmlId=\"$1\"$0"],
+    "description": "htmlId attribute"
+  },
+
+  "htmlclass": {
+    "prefix": "m2.layout.attr.htmlClass",
+    "body": ["htmlClass=\"$1\"$0"],
+    "description": "htmlClass attribute"
+  },
+
+  "htmltag": {
+    "prefix": "m2.layout.attr.htmlTag",
+    "body": ["htmlTag=\"$1\"$0"],
+    "description": "htmlTag attribute"
+  },
+
+  "output": {
+    "prefix": "m2.layout.attr.output",
+    "body": ["output=\"${1|0,1|}\"$0"],
+    "description": "Output attribute"
+  },
+
+  "label": {
+    "prefix": "m2.layout.attr.label",
+    "body": ["label=\"$1\"$0"],
+    "description": "Label attribute"
+  },
+
+  "as": {
+    "prefix": "m2.layout.attr.as",
+    "body": ["as=\"$1\"$0"],
+    "description": "As attribute"
+  },
+
+  "template": {
+    "prefix": "m2.layout.attr.template",
+    "body": ["template=\"$1\"$0"],
+    "description": "Template attribute"
+  },
+
+  "class": {
+    "prefix": "m2.layout.attr.class",
+    "body": ["class=\"$1\"$0"],
+    "description": "Class attribute"
+  },
+
+  "name": {
+    "prefix": "m2.layout.attr.name",
+    "body": ["name=\"$1\"$0"],
+    "description": "Name attribute"
+  },
+
+  "before": {
+    "prefix": "m2.layout.attr.before",
+    "body": ["before=\"$1\"$0"],
+    "description": "Before attribute"
+  },
+
+  "after": {
+    "prefix": "m2.layout.attr.after",
+    "body": ["after=\"$1\"$0"],
+    "description": "After attribute"
+  },
+
+  "cacheable": {
+    "prefix": "m2.layout.attr.cacheable",
+    "body": ["cacheable=\"${1|false,true|}\"$0"],
+    "description": "Cacheable attribute"
+  },
+
+  "display": {
+    "prefix": "m2.layout.attr.display",
+    "body": ["display=\"${1|false,true|}\"$0"],
+    "description": "Display attribute"
+  },
+
+  "remove": {
+    "prefix": "m2.layout.attr.remove",
+    "body": ["remove=\"${1|false,true|}\"$0"],
+    "description": "Remove attribute"
+  }
+}

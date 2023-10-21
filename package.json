@@ -1,0 +1,98 @@
+{
+  "name": "magento2-snippets",
+  "displayName": "Magento2 snippets",
+  "description": "A collection of Magento 2 snippets",
+  "icon": "images/icon.png",
+  "publisher": "Jamacio Rocha",
+  "license": "MIT",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "php",
+        "path": "./snippets/php/magento2.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/php/php.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/argument.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/attribute.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/block.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/container.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/move.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/remove.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/scaffold.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/layout/update.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/di.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/module/module.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/module/registration.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/module/composer.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/events.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/routes.json"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}

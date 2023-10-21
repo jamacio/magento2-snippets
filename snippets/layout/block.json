@@ -1,0 +1,23 @@
+{
+  "block": {
+    "prefix": "m2.layout.block",
+    "body": ["<block class=\"$1\" name=\"$3\" as=\"$5\" template=\"$7\" />$0"],
+    "description": "Defines a block"
+  },
+
+  "block_wrap": {
+    "prefix": "m2.layout.blockWrap",
+    "body": [
+      "<block class=\"$1\" name=\"$3\" as=\"$5\" template=\"$7\">",
+      "\t$0",
+      "</block>"
+    ],
+    "description": "Defines a wrapping block"
+  },
+
+  "rference_block": {
+    "prefix": "m2.layout.refBlock",
+    "body": ["<referenceBlock name=\"$1\">", "\t$0", "</referenceBlock>"],
+    "description": "Targets blocks and applies updates specified"
+  }
+}

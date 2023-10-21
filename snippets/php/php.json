@@ -1,0 +1,237 @@
+{
+  "__construct": {
+    "prefix": "m2.__construct",
+    "body": [
+      "public function __construct(\\${1:parameters})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Constructor"
+  },
+  "echo": {
+    "prefix": "m2.echo",
+    "body": ["echo \"$0\";"],
+    "description": "'echo' statement"
+  },
+  "foreach": {
+    "prefix": "m2.foreach",
+    "body": ["foreach ($1 as \\${2:item}) {", "\t$0", "}"],
+    "description": "foreach(iterable_expr as $value) {...}"
+  },
+  "foreach_k": {
+    "prefix": "m2.foreach_k",
+    "body": ["foreach ($1 as \\${2:key} => \\${3:index}) {", "\t$0", "}"],
+    "description": "foreach(iterable_expr as $key => $value) {...}"
+  },
+  "include": {
+    "prefix": "m2.include",
+    "body": ["include \"$0\";"],
+    "description": "'include' statement"
+  },
+  "include_once": {
+    "prefix": "m2.include_once",
+    "body": ["include_once \"$0\";"],
+    "description": "'include_once' statement"
+  },
+  "private_function": {
+    "prefix": "m2.private_function",
+    "body": ["private function $1($2)", "{", "\t$0", "}"],
+    "description": "private function"
+  },
+  "private_static_function": {
+    "prefix": "m2.private_static_function",
+    "body": ["private static function $1($2)", "{", "\t$0", "}"],
+    "description": "private static function"
+  },
+  "protected_function": {
+    "prefix": "m2.protected_function",
+    "body": ["protected function $1($2)", "{", "\t$0", "}"],
+    "description": "protected function"
+  },
+  "protected_static_function": {
+    "prefix": "m2.protected_static_function",
+    "body": ["protected static function $1($2)", "{", "\t$0", "}"],
+    "description": "protected static function"
+  },
+  "public_function": {
+    "prefix": "m2.public_function",
+    "body": ["public function $1($2)", "{", "\t$0", "}"],
+    "description": "public function"
+  },
+  "public_static_function": {
+    "prefix": "m2.public_static_function",
+    "body": ["public static function $1($2)", "{", "\t$0", "}"],
+    "description": "public static function"
+  },
+  "require": {
+    "prefix": "m2.require",
+    "body": ["require \"$0\";"],
+    "description": "'require' statement"
+  },
+  "require_once": {
+    "prefix": "m2.require_once",
+    "body": ["require_once \"$0\";"],
+    "description": "'require_once' statement"
+  },
+  "throw_new": {
+    "prefix": "m2.throw_new",
+    "body": ["throw new ${1:\\Exception}(\"${2:Error Processing Request}\");"],
+    "description": "throw new"
+  },
+
+  "print_r": {
+    "prefix": "m2.print_r",
+    "body": ["print_r($1);"],
+    "description": "PHP print_r() function"
+  },
+  "try_catch": {
+    "prefix": "m2.try_catch",
+    "body": ["try {", "\t$1", "} catch (\\Exception \\$e) {", "\t", "}"],
+    "description": "Exceptions Block"
+  },
+  "try_catch_example": {
+    "prefix": "m2.try_catch_example",
+    "body": [
+      "try {",
+      "\tthrow new Exception(\"${1:error message}\", ${2:400});",
+      "} catch(\\Exception \\$e) {",
+      "\t${5:echo \\$e->getCode(). \\$e->getMessage();}",
+      "}"
+    ],
+    "description": "Exceptions Block Example"
+  },
+  "globals": {
+    "prefix": "m2.globals",
+    "body": ["\\$GLOBALS[\"${1:key}\"]"],
+    "description": "$GLOBALS array"
+  },
+  "server": {
+    "prefix": "m2.server",
+    "body": ["\\$_SERVER[\"${1:key}\"]"],
+    "description": "$_SERVER array"
+  },
+  "request": {
+    "prefix": "m2.request",
+    "body": ["\\$_REQUEST[\"${1:key}\"]"],
+    "description": "$_REQUEST array"
+  },
+  "post": {
+    "prefix": "m2.post",
+    "body": ["\\$_POST[\"${1:key}\"]"],
+    "description": "$_POST array"
+  },
+  "get": {
+    "prefix": "m2.get",
+    "body": ["\\$_GET[\"${1:key}\"]"],
+    "description": "$_GET array"
+  },
+  "files": {
+    "prefix": "m2.file",
+    "body": ["\\$_FILES['${1:userfile}']['${2:key}']"],
+    "description": "$_FILES array"
+  },
+  "env": {
+    "prefix": "m2.env",
+    "body": ["\\$_ENV[\"${1:key}\"]"],
+    "description": "$_ENV array"
+  },
+  "cookie": {
+    "prefix": "m2.cookie",
+    "body": ["\\$_COOKIE[\"${1:key}\"]"],
+    "description": "$_COOKIE array"
+  },
+  "session": {
+    "prefix": "m2.session",
+    "body": ["\\$_SESSION[\"${1:key}\"]"],
+    "description": "$_SESSION array"
+  },
+  "for_loop": {
+    "prefix": "m2.for_loop",
+    "body": [
+      "for (${1:i} = ${2:0}; ${1:i} < ${3:limit}; ${1:i}++) {",
+      "\t${0:# code...}",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "for_end": {
+    "prefix": "m2.for_end",
+    "body": [
+      "for (${1:i} = ${2:0}; ${1:i} < ${3:limit}; ${1:i}++):",
+      "\t${0:# code...}",
+      "endfor;"
+    ],
+    "description": "For end loop"
+  },
+  "loop_while": {
+    "prefix": "m2.loop_while",
+    "body": [
+      "while (${1:variable} ${2:<=} ${3:limit}) {",
+      "\t${0:# code...}",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "while_end": {
+    "prefix": "m2.while_end",
+    "body": [
+      "while (${1:variable} ${2:<=} ${3:limit}):",
+      "\t${0:# code...}",
+      "endwhile;"
+    ],
+    "description": "While end loop"
+  },
+  "do_while": {
+    "prefix": "m2.do_while",
+    "body": [
+      "do {",
+      "\t${0:# code...}",
+      "} while (${1:variable} ${2:<=} ${3:limit});"
+    ],
+    "description": "Do while loop"
+  },
+  "switch_case": {
+    "prefix": "m2.switch_case",
+    "body": [
+      "switch (${1:variable}) {",
+      "\tcase '${2:label}':",
+      "\t\t${3:# code...}",
+      "\t\tbreak;",
+      "\tcase '${4:label}':",
+      "\t\t${5:# code...}",
+      "\t\tbreak;$6",
+      "\tdefault:",
+      "\t\t${0:# code...}",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Switch block"
+  },
+  "case": {
+    "prefix": "m2.case",
+    "body": ["case '${1:label}':", "\t${2:# code...}", "\tbreak;"],
+    "description": "Case addon block"
+  },
+  "if_ternary": {
+    "prefix": "m2.if_ternary",
+    "body": ["${1:condition} ? ${2:if_true} : ${3:if_false};"],
+    "description": "Ternary statement"
+  },
+  "if": {
+    "prefix": "m2.if",
+    "body": ["if (${1:condition}) {", "\t${0:# code...}", "}"],
+    "description": "If  block"
+  },
+  "if_else": {
+    "prefix": "m2.if_else",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2:# code...}",
+      "} else {",
+      "\t${0:# code...}",
+      "}"
+    ],
+    "description": "If else block"
+  }
+}

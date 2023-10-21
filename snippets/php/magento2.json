@@ -1,0 +1,57 @@
+{
+  "get_base_url": {
+    "prefix": "m2.get_base_url",
+    "body": "\n${3:\\$this}->getBaseUrl(${1})${2};\n",
+    "description": "Magento 2 getBaseUrl function",
+    "scope": ""
+  },
+  "helper": {
+    "prefix": "m2.helper",
+    "body": "\n${3:\\$this}->helper('${1:Magento\\Tax\\Helper\\Data}')${2};\n",
+    "description": "Magento 2 get Helper",
+    "scope": ""
+  },
+  "get_block_html": {
+    "prefix": "m2.get_block_html",
+    "body": "\n${3:\\$block}->getBlockHtml('${1:formkey}')${2};\n",
+    "description": "Magento 2 get Helper",
+    "scope": ""
+  },
+  "object_manager": {
+    "prefix": "m2.object_manager",
+    "body": [
+      "\\$objectManager = \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      "\\$object = \\$objectManager->create(::class);"
+    ]
+  },
+  "logger": {
+    "prefix": "m2.logger",
+    "body": [
+      "\\$objectManager = \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      "\\$logger = \\$objectManager->create(\\Psr\\Log\\LoggerInterface::class);",
+      "\\$logger->info(\"\");"
+    ]
+  },
+  "logger_custom": {
+    "prefix": "m2.logger_custom",
+    "body": [
+      "\\$writer = new \\Zend_Log_Writer_Stream(BP . '/var/log/${1:custom}.log');",
+      "\\$logger = new \\Zend_Log();",
+      "\\$logger->addWriter(\\$writer);",
+      "\\$logger->info('${2:text message}');"
+    ]
+  },
+  "customer_session": {
+    "prefix": "m2.customer_session",
+    "body": [
+      " \\$objectManager = \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      " \\$customerSession = \\$objectManager->create('Magento\\Customer\\Model\\Session');",
+      " if (\\$customerSession->isLoggedIn()) {",
+      "     echo 'Customer Id: ' . \\$customerSession->getCustomer()->getId() . '<br/>';",
+      "     echo 'Customer Name: ' . \\$customerSession->getCustomer()->getName() . '<br/>';",
+      "     echo 'Customer Email: ' . \\$customerSession->getCustomer()->getEmail() . '<br/>';",
+      "     echo 'Customer Group Id: ' .  \\$customerSession->getCustomer()->getGroupId() . '<br/>';",
+      " }"
+    ]
+  }
+}
