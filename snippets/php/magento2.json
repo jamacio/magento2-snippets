@@ -72,7 +72,8 @@
       "\\$catalogSession->setMyValue('I Love Magento2');",
       "// print session variables value",
       "echo \\$catalogSession->getMyValue();"
-    ]
+    ],
+    "description": "Factory class for products in Magento"
   },
   "new_session_customer": {
     "prefix": "m2.new_session_customer",
@@ -95,5 +96,232 @@
       "// print session variables value",
       "echo \\$checkoutSession->getMyValue();"
     ]
+  },
+  "list_products": {
+    "prefix": "m2.list_products",
+    "body": [
+      "\\$productCollection = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->getCollection();",
+      "foreach (\\$productCollection as \\$product) {",
+      "\techo \\$product->getName();",
+      "}"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "List all products"
+  },
+  "list_users": {
+    "prefix": "m2.list_users",
+    "body": [
+      "\\$customerCollection = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->getCollection();",
+      "foreach (\\$customerCollection as \\$customer) {",
+      "\techo \\$customer->getEmail();",
+      "}"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "List all users"
+  },
+  "list_rules": {
+    "prefix": "m2.list_rules",
+    "body": [
+      "\\$ruleCollection = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->getCollection();",
+      "foreach (\\$ruleCollection as \\$rule) {",
+      "\techo \\$rule->getName();",
+      "}"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "List all sales rules"
+  },
+  "create_product": {
+    "prefix": "m2.create_product",
+    "body": [
+      "\\$productFactory = \\$objectManager->create('\\Magento\\Catalog\\Model\\ProductFactory');",
+      "\\$product = \\$productFactory->create();",
+      "// Set product attributes",
+      "\\$product->setName('New Product');",
+      "\\$product->setSku('new-sku');",
+      "\\$product->setPrice(100.00);",
+      "// Save product",
+      "\\$product->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Create a new product"
+  },
+  "create_user": {
+    "prefix": "m2.create_user",
+    "body": [
+      "\\$customerFactory = \\$objectManager->create('\\Magento\\Customer\\Model\\CustomerFactory');",
+      "\\$customer = \\$customerFactory->create();",
+      "// Set customer attributes",
+      "\\$customer->setEmail('user@example.com');",
+      "\\$customer->setFirstname('John');",
+      "\\$customer->setLastname('Doe');",
+      "// Save customer",
+      "\\$customer->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Create a new user"
+  },
+  "create_rule": {
+    "prefix": "m2.create_rule",
+    "body": [
+      "\\$ruleFactory = \\$objectManager->create('\\Magento\\SalesRule\\Model\\RuleFactory');",
+      "\\$rule = \\$ruleFactory->create();",
+      "// Set rule attributes",
+      "\\$rule->setName('New Rule');",
+      "\\$rule->setCouponCode('NEWRULE123');",
+      "\\$rule->setDiscountAmount(10);",
+      "// Save rule",
+      "\\$rule->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Create a new sales rule"
+  },
+  "get_product_by_id": {
+    "prefix": "m2.get_product_by_id",
+    "body": [
+      "\\$productId = 1; // Replace with the desired product ID",
+      "\\$product = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->load(\\$productId);",
+      "echo \\$product->getName();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Get a product by ID"
+  },
+  "get_user_by_id": {
+    "prefix": "m2.get_user_by_id",
+    "body": [
+      "\\$userId = 1; // Replace with the desired user ID",
+      "\\$customer = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->load(\\$userId);",
+      "echo \\$customer->getEmail();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Get a user by ID"
+  },
+  "get_rule_by_id": {
+    "prefix": "m2.get_rule_by_id",
+    "body": [
+      "\\$ruleId = 1; // Replace with the desired rule ID",
+      "\\$rule = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->load(\\$ruleId);",
+      "echo \\$rule->getName();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Get a sales rule by ID"
+  },
+  "update_product": {
+    "prefix": "m2.update_product",
+    "body": [
+      "\\$productId = 1; // Replace with the product ID to update",
+      "\\$product = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->load(\\$productId);",
+      "// Update product attributes",
+      "\\$product->setName('Updated Product');",
+      "\\$product->setPrice(120.00);",
+      "// Save the updated product",
+      "\\$product->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Update a product"
+  },
+  "update_user": {
+    "prefix": "m2.update_user",
+    "body": [
+      "\\$userId = 1; // Replace with the user ID to update",
+      "\\$customer = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->load(\\$userId);",
+      "// Update user attributes",
+      "\\$customer->setFirstname('Jane');",
+      "\\$customer->setLastname('Smith');",
+      "// Save the updated user",
+      "\\$customer->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Update a user"
+  },
+  "update_rule": {
+    "prefix": "m2.update_rule",
+    "body": [
+      "\\$ruleId = 1; // Replace with the rule ID to update",
+      "\\$rule = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->load(\\$ruleId);",
+      "// Update rule attributes",
+      "\\$rule->setName('Updated Rule');",
+      "\\$rule->setDiscountAmount(15);",
+      "// Save the updated rule",
+      "\\$rule->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Update a sales rule"
+  },
+  "delete_product": {
+    "prefix": "m2.delete_product",
+    "body": [
+      "\\$productId = 1; // Replace with the product ID to delete",
+      "\\$product = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->load(\\$productId);",
+      "\\$product->delete();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Delete a product"
+  },
+  "delete_user": {
+    "prefix": "m2.delete_user",
+    "body": [
+      "\\$userId = 1; // Replace with the user ID to delete",
+      "\\$customer = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->load(\\$userId);",
+      "\\$customer->delete();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Delete a user"
+  },
+  "delete_rule": {
+    "prefix": "m2.delete_rule",
+    "body": [
+      "\\$ruleId = 1; // Replace with the rule ID to delete",
+      "\\$rule = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->load(\\$ruleId);",
+      "\\$rule->delete();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Delete a sales rule"
+  },
+  "create_order": {
+    "prefix": "m2.create_order",
+    "body": [
+      "\\$orderFactory = \\$objectManager->create('\\Magento\\Sales\\Model\\OrderFactory');",
+      "\\$order = \\$orderFactory->create();",
+      "// Set order details and items",
+      "\\$order->setCustomerId(1); // Replace with the customer ID",
+      "\\$order->setStoreId(1); // Replace with the store ID",
+      "\\$order->setBaseGrandTotal(100.00); // Set the order total",
+      "// Add order items",
+      "\\$orderItem = \\$objectManager->create('\\Magento\\Sales\\Model\\Order\\Item');",
+      "\\$orderItem->setProductId(1); // Replace with the product ID",
+      "\\$orderItem->setQtyOrdered(2); // Set quantity",
+      "\\$order->addItem(\\$orderItem);",
+      "// Save the order",
+      "\\$order->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Create a new order"
+  },
+  "list_orders": {
+    "prefix": "m2.list_orders",
+    "body": [
+      "\\$orderCollection = \\$objectManager->create('\\Magento\\Sales\\Model\\Order')->getCollection();",
+      "foreach (\\$orderCollection as \\$order) {",
+      "\techo \\$order->getIncrementId();",
+      "}"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "List all orders"
+  },
+  "get_order_by_id": {
+    "prefix": "m2.get_order_by_id",
+    "body": [
+      "\\$orderId = 1; // Replace with the desired order ID",
+      "\\$order = \\$objectManager->create('\\Magento\\Sales\\Model\\Order')->load(\\$orderId);",
+      "echo \\$order->getIncrementId();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Get an order by ID"
+  },
+  "create_cart": {
+    "prefix": "m2.create_cart",
+    "body": [
+      "\\$cartFactory = \\$objectManager->create('\\Magento\\Checkout\\Model\\CartFactory');",
+      "\\$cart = \\$cartFactory->create();",
+      "// Set the customer session and store ID",
+      "\\$cart->setQuote(\\$objectManager->create('\\Magento\\Quote\\Model\\Quote'));",
+      "\\$cart->getQuote()->setStore(\\$objectManager->create('\\Magento\\Store\\Model\\Store')->load(1));",
+      "// Add products to the cart",
+      "\\$cart->addProduct(\\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->load(1), 2);",
+      "\\$cart->save();"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Create a shopping cart"
+  },
+  "list_carts": {
+    "prefix": "m2.list_carts",
+    "body": [
+      "\\$cartCollection = \\$objectManager->create('\\Magento\\Checkout\\Model\\Cart')->getCollection();",
+      "foreach (\\$cartCollection as \\$cart) {",
+      "\techo \\$cart->getId();",
+      "}"
+ ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "List all shopping carts"
   }
 }
