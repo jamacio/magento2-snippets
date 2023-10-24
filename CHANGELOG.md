@@ -4,15 +4,18 @@ All notable changes to the "php-magento2-snippets" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.0.1]
 
-- Initial release
+## [0.0.5]
 
-## [0.0.2]
+### Changed
 
-### Fixed
+- Changing help command
 
-- An annoying bug that was causing issues.
+## [0.0.4]
+
+### Added
+
+- listing a number of common factory classes used in Magento2.
 
 ## [0.0.3]
 
@@ -26,8 +29,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Changing the log command
 
-## [0.0.4]
+## [0.0.2]
 
-### Added
+### Fixed
 
-- listing a number of common factory classes used in Magento2.
+- An annoying bug that was causing issues.
+
+## [0.0.1]
+
+- Initial release

@@ -7,7 +7,7 @@
   },
   "helper": {
     "prefix": "m2.helper",
-    "body": "\n${3:\\$this}->helper('${1:Magento\\Tax\\Helper\\Data}')${2};\n",
+    "body": "\n${3:\\$this}->helper('${1:Magento\\Vendor\\Helper\\Data}')${2};\n",
     "description": "Magento 2 get Helper",
     "scope": ""
   },
@@ -21,7 +21,7 @@
     "prefix": "m2.object_manager",
     "body": [
       "\\$objectManager = \\Magento\\Framework\\App\\ObjectManager::getInstance();",
-      "\\$object = \\$objectManager->create(::class);"
+      "\\$object = \\$objectManager->create(${1:m2.cls}::class);"
     ]
   },
   "logger": {
