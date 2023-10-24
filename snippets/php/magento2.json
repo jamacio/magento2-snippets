@@ -32,13 +32,22 @@
       "\\$logger->info(\"\");"
     ]
   },
-  "logger_custom": {
-    "prefix": "m2.logger_custom",
+  "log_custom": {
+    "prefix": "m2.log_custom",
     "body": [
       "\\$writer = new \\Zend_Log_Writer_Stream(BP . '/var/log/${1:custom}.log');",
       "\\$logger = new \\Zend_Log();",
       "\\$logger->addWriter(\\$writer);",
       "\\$logger->info('${2:text message}');"
+    ]
+  },
+  "log_json_encode": {
+    "prefix": "m2.log_json_encode",
+    "body": [
+      "\\$writer = new \\Zend_Log_Writer_Stream(BP . '/var/log/${1:custom}.log');",
+      "\\$logger = new \\Zend_Log();",
+      "\\$logger->addWriter(\\$writer);",
+      "\\$logger->info(json_encode(${2:ArrayOrObject}));"
     ]
   },
   "customer_session": {
@@ -52,6 +61,39 @@
       "     echo 'Customer Email: ' . \\$customerSession->getCustomer()->getEmail() . '<br/>';",
       "     echo 'Customer Group Id: ' .  \\$customerSession->getCustomer()->getGroupId() . '<br/>';",
       " }"
+    ]
+  },
+  "new_session_catalog": {
+    "prefix": "m2.new_session_catalog",
+    "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      "\\$catalogSession = \\$objectManager->get('\\Magento\\Catalog\\Model\\Session');",
+      "// set session variables and their value",
+      "\\$catalogSession->setMyValue('I Love Magento2');",
+      "// print session variables value",
+      "echo \\$catalogSession->getMyValue();"
+    ]
+  },
+  "new_session_customer": {
+    "prefix": "m2.new_session_customer",
+    "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      "\\$customerSession = \\$objectManager->get('\\Magento\\Customer\\Model\\Session');",
+      "// set session variables and their value",
+      "\\$customerSession->setMyValue('I Love Magento2');",
+      "// print session variables value",
+      "echo \\$customerSession->getMyValue();"
+    ]
+  },
+  "new_session_checkout": {
+    "prefix": "m2.new_session_checkout",
+    "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      "\\$checkoutSession = \\$objectManager->get('\\Magento\\Checkout\\Model\\Session');",
+      "// set session variables and their value",
+      "\\$checkoutSession->setMyValue('I Love Magento2');",
+      "// print session variables value",
+      "echo \\$checkoutSession->getMyValue();"
     ]
   }
 }
