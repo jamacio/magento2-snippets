@@ -5,6 +5,13 @@ All notable changes to the "php-magento2-snippets" extension will be documented 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 
+## [0.0.6]
+
+### Added
+
+- New snipets to create users, order product....
+- New snipets to list users, order product....
+
 ## [0.0.5]
 
 ### Changed

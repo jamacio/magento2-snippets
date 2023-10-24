@@ -32,6 +32,9 @@ Here is a list of some of the available snippets:
 - `m2.object_manager`: Create an object manager.
 - `m2.cls_product`: Factory class for products in Magento.
 - `m2.cls_category`: Factory class for categories in Magento.
+- `m2.list_carts"`: List all shopping carts.
+- `m2.create_order"`: Create a new order.
+- `m2.get_order_by_id"`: Get an order by ID.
 - And many more!
 
 ## Customization
