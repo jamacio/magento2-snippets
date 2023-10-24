@@ -30,6 +30,8 @@ Here is a list of some of the available snippets:
 - `m2.layout.block`: Create a new block class.
 - `m2.logger`: Create a log file.
 - `m2.object_manager`: Create an object manager.
+- `m2.cls_product`: Factory class for products in Magento.
+- `m2.cls_category`: Factory class for categories in Magento.
 - And many more!
 
 ## Customization

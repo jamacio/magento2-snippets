@@ -1,0 +1,122 @@
+{
+  "cls_product": {
+    "prefix": "m2.cls_product",
+    "body": "\\Magento\\Catalog\\Model\\ProductFactory",
+    "description": "Factory class for products in Magento",
+    "scope": ""
+  },
+  "cls_category": {
+    "prefix": "m2.cls_category",
+    "body": "\\Magento\\Catalog\\Model\\CategoryFactory",
+    "description": "Factory class for categories in Magento",
+    "scope": ""
+  },
+  "cls_customer": {
+    "prefix": "m2.cls_customer",
+    "body": "\\Magento\\Customer\\Model\\CustomerFactory",
+    "description": "Factory class for customers in Magento",
+    "scope": ""
+  },
+  "cls_order": {
+    "prefix": "m2.cls_order",
+    "body": "\\Magento\\Sales\\Model\\OrderFactory",
+    "description": "Factory class for orders in Magento",
+    "scope": ""
+  },
+  "cls_stock_registry": {
+    "prefix": "m2.cls_stock_registry",
+    "body": "\\Magento\\CatalogInventory\\Model\\StockRegistryFactory",
+    "description": "Factory class for stock registry in Magento",
+    "scope": ""
+  },
+  "cls_cart": {
+    "prefix": "m2.cls_cart",
+    "body": "\\Magento\\Checkout\\Model\\CartFactory",
+    "description": "Factory class for carts in Magento",
+    "scope": ""
+  },
+  "cls_quote": {
+    "prefix": "m2.cls_quote",
+    "body": "\\Magento\\Quote\\Model\\QuoteFactory",
+    "description": "Factory class for quotes in Magento",
+    "scope": ""
+  },
+  "cls_media_gallery_entry": {
+    "prefix": "m2.cls_media_gallery_entry",
+    "body": "\\Magento\\Catalog\\Model\\Product\\MediaGalleryEntryFactory",
+    "description": "Factory class for media gallery entries of products in Magento",
+    "scope": ""
+  },
+  "cls_store": {
+    "prefix": "m2.cls_store",
+    "body": "\\Magento\\Store\\Model\\StoreFactory",
+    "description": "Factory class for stores in Magento",
+    "scope": ""
+  },
+  "cls_category_resource": {
+    "prefix": "m2.cls_category_resource",
+    "body": "\\Magento\\Catalog\\Model\\ResourceModel\\CategoryFactory",
+    "description": "Factory class for category resource in Magento",
+    "scope": ""
+  },
+  "cls_product_resource": {
+    "prefix": "m2.cls_product_resource",
+    "body": "\\Magento\\Catalog\\Model\\ResourceModel\\ProductFactory",
+    "description": "Factory class for product resource in Magento",
+    "scope": ""
+  },
+  "cls_customer_resource": {
+    "prefix": "m2.cls_customer_resource",
+    "body": "\\Magento\\Customer\\Model\\ResourceModel\\CustomerFactory",
+    "description": "Factory class for customer resource in Magento",
+    "scope": ""
+  },
+  "cls_order_resource": {
+    "prefix": "m2.cls_order_resource",
+    "body": "\\Magento\\Sales\\Model\\ResourceModel\\OrderFactory",
+    "description": "Factory class for order resource in Magento",
+    "scope": ""
+  },
+  "cls_quote_resource": {
+    "prefix": "m2.cls_quote_resource",
+    "body": "\\Magento\\Quote\\Model\\ResourceModel\\QuoteFactory",
+    "description": "Factory class for quote resource in Magento",
+    "scope": ""
+  },
+  "cls_stock_registry_resource": {
+    "prefix": "m2.cls_stock_registry_resource",
+    "body": "\\Magento\\CatalogInventory\\Model\\ResourceModel\\StockRegistryFactory",
+    "description": "Factory class for stock registry resource in Magento",
+    "scope": ""
+  },
+  "cls_cart_resource": {
+    "prefix": "m2.cls_cart_resource",
+    "body": "\\Magento\\Checkout\\Model\\ResourceModel\\CartFactory",
+    "description": "Factory class for cart resource in Magento",
+    "scope": ""
+  },
+  "cls_store_resource": {
+    "prefix": "m2.cls_store_resource",
+    "body": "\\Magento\\Store\\Model\\ResourceModel\\StoreFactory",
+    "description": "Factory class for store resource in Magento",
+    "scope": ""
+  },
+  "cls_media_gallery_entry_resource": {
+    "prefix": "m2.cls_media_gallery_entry_resource",
+    "body": "\\Magento\\Catalog\\Model\\ResourceModel\\Product\\MediaGalleryEntryFactory",
+    "description": "Factory class for media gallery entry resource of products in Magento",
+    "scope": ""
+  },
+  "cls_rating": {
+    "prefix": "m2.cls_rating",
+    "body": "\\Magento\\Review\\Model\\RatingFactory",
+    "description": "Factory class for ratings in Magento",
+    "scope": ""
+  },
+  "cls_url_rewrite": {
+    "prefix": "m2.cls_url_rewrite",
+    "body": "\\Magento\\UrlRewrite\\Model\\UrlRewriteFactory",
+    "description": "Factory class for URL rewrite in Magento",
+    "scope": ""
+  }
+}

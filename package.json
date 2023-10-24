@@ -20,6 +20,12 @@
   "categories": [
     "Snippets"
   ],
+  "Tags": [
+    "Snippets",
+    "Magento",
+    "Magento2",
+    "jamacio"
+  ],
   "contributes": {
     "snippets": [
       {
@@ -29,6 +35,10 @@
       {
         "language": "php",
         "path": "./snippets/php/php.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/php/magento2-class.json"
       },
       {
         "language": "xml",

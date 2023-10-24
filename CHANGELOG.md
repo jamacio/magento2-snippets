@@ -25,3 +25,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Changed
 
 - Changing the log command
+
+## [0.0.4]
+
+### Added
+
+- listing a number of common factory classes used in Magento2.
