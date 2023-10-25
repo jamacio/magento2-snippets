@@ -20,8 +20,18 @@ Using Magento 2 Snippets is straightforward. Follow these steps to start using t
 2. Create or open a PHP, XML, or PHTML file.
 3. Type the prefix of a snippet and press `Tab` to trigger the code snippet.
 
-For example, to generate a basic Magento 2 module, type `m2` and press `Tab`. The extension will automatically generate the module structure for you.
+For example, to pick up a product by ID in Magento 2, type `m2.get_product_by_id` and press `Tab`. The extension will automatically generate the code structure for you.
 
+**Trigger:** `m2.get_product_by_id`
+
+**Output:**
+```php
+$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+$productId = 1; // Replace with the desired product ID
+$product = $objectManager->create('\Magento\Catalog\Model\Product')->load($productId);
+echo $product->getName();
+// note: Magento does not recommend using ObjectManager in production
+```
 ## Available Snippets
 
 Here is a list of some of the available snippets:
