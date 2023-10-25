@@ -100,6 +100,7 @@
   "list_products": {
     "prefix": "m2.list_products",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$productCollection = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->getCollection();",
       "foreach (\\$productCollection as \\$product) {",
       "\techo \\$product->getName();",
@@ -110,6 +111,7 @@
   "list_users": {
     "prefix": "m2.list_users",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$customerCollection = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->getCollection();",
       "foreach (\\$customerCollection as \\$customer) {",
       "\techo \\$customer->getEmail();",
@@ -120,6 +122,7 @@
   "list_rules": {
     "prefix": "m2.list_rules",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$ruleCollection = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->getCollection();",
       "foreach (\\$ruleCollection as \\$rule) {",
       "\techo \\$rule->getName();",
@@ -130,6 +133,7 @@
   "create_product": {
     "prefix": "m2.create_product",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$productFactory = \\$objectManager->create('\\Magento\\Catalog\\Model\\ProductFactory');",
       "\\$product = \\$productFactory->create();",
       "// Set product attributes",
@@ -144,6 +148,7 @@
   "create_user": {
     "prefix": "m2.create_user",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$customerFactory = \\$objectManager->create('\\Magento\\Customer\\Model\\CustomerFactory');",
       "\\$customer = \\$customerFactory->create();",
       "// Set customer attributes",
@@ -158,6 +163,7 @@
   "create_rule": {
     "prefix": "m2.create_rule",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$ruleFactory = \\$objectManager->create('\\Magento\\SalesRule\\Model\\RuleFactory');",
       "\\$rule = \\$ruleFactory->create();",
       "// Set rule attributes",
@@ -172,6 +178,7 @@
   "get_product_by_id": {
     "prefix": "m2.get_product_by_id",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$productId = 1; // Replace with the desired product ID",
       "\\$product = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->load(\\$productId);",
       "echo \\$product->getName();"
@@ -181,6 +188,7 @@
   "get_user_by_id": {
     "prefix": "m2.get_user_by_id",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$userId = 1; // Replace with the desired user ID",
       "\\$customer = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->load(\\$userId);",
       "echo \\$customer->getEmail();"
@@ -190,6 +198,7 @@
   "get_rule_by_id": {
     "prefix": "m2.get_rule_by_id",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$ruleId = 1; // Replace with the desired rule ID",
       "\\$rule = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->load(\\$ruleId);",
       "echo \\$rule->getName();"
@@ -199,6 +208,7 @@
   "update_product": {
     "prefix": "m2.update_product",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$productId = 1; // Replace with the product ID to update",
       "\\$product = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->load(\\$productId);",
       "// Update product attributes",
@@ -212,6 +222,7 @@
   "update_user": {
     "prefix": "m2.update_user",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$userId = 1; // Replace with the user ID to update",
       "\\$customer = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->load(\\$userId);",
       "// Update user attributes",
@@ -225,6 +236,7 @@
   "update_rule": {
     "prefix": "m2.update_rule",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$ruleId = 1; // Replace with the rule ID to update",
       "\\$rule = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->load(\\$ruleId);",
       "// Update rule attributes",
@@ -238,6 +250,7 @@
   "delete_product": {
     "prefix": "m2.delete_product",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$productId = 1; // Replace with the product ID to delete",
       "\\$product = \\$objectManager->create('\\Magento\\Catalog\\Model\\Product')->load(\\$productId);",
       "\\$product->delete();"
@@ -247,6 +260,7 @@
   "delete_user": {
     "prefix": "m2.delete_user",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$userId = 1; // Replace with the user ID to delete",
       "\\$customer = \\$objectManager->create('\\Magento\\Customer\\Model\\Customer')->load(\\$userId);",
       "\\$customer->delete();"
@@ -256,6 +270,7 @@
   "delete_rule": {
     "prefix": "m2.delete_rule",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$ruleId = 1; // Replace with the rule ID to delete",
       "\\$rule = \\$objectManager->create('\\Magento\\SalesRule\\Model\\Rule')->load(\\$ruleId);",
       "\\$rule->delete();"
@@ -265,6 +280,7 @@
   "create_order": {
     "prefix": "m2.create_order",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$orderFactory = \\$objectManager->create('\\Magento\\Sales\\Model\\OrderFactory');",
       "\\$order = \\$orderFactory->create();",
       "// Set order details and items",
@@ -284,6 +300,7 @@
   "list_orders": {
     "prefix": "m2.list_orders",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$orderCollection = \\$objectManager->create('\\Magento\\Sales\\Model\\Order')->getCollection();",
       "foreach (\\$orderCollection as \\$order) {",
       "\techo \\$order->getIncrementId();",
@@ -294,6 +311,7 @@
   "get_order_by_id": {
     "prefix": "m2.get_order_by_id",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$orderId = 1; // Replace with the desired order ID",
       "\\$order = \\$objectManager->create('\\Magento\\Sales\\Model\\Order')->load(\\$orderId);",
       "echo \\$order->getIncrementId();"
@@ -303,6 +321,7 @@
   "create_cart": {
     "prefix": "m2.create_cart",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$cartFactory = \\$objectManager->create('\\Magento\\Checkout\\Model\\CartFactory');",
       "\\$cart = \\$cartFactory->create();",
       "// Set the customer session and store ID",
@@ -317,6 +336,7 @@
   "list_carts": {
     "prefix": "m2.list_carts",
     "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$cartCollection = \\$objectManager->create('\\Magento\\Checkout\\Model\\Cart')->getCollection();",
       "foreach (\\$cartCollection as \\$cart) {",
       "\techo \\$cart->getId();",

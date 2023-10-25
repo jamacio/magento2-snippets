@@ -4,6 +4,11 @@ All notable changes to the "php-magento2-snippets" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.7]
+
+### Fixed
+
+- An annoying bug that was causing issues.
 
 ## [0.0.6]
 
