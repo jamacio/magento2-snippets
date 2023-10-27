@@ -13,9 +13,9 @@
     "type": "git",
     "url": "https://github.com/jamacio/magento2-snippets.git"
   },
-  "version": "0.0.8",
+  "version": "0.0.9",
   "engines": {
-    "vscode": "^1.83.0"
+    "vscode": "^1.63.2"
   },
   "categories": [
     "Snippets"
