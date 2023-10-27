@@ -15,7 +15,7 @@
   },
   "version": "0.0.9",
   "engines": {
-    "vscode": "^1.63.2"
+    "vscode": "^1.62.0"
   },
   "categories": [
     "Snippets"
@@ -98,7 +98,7 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
+    "@types/vscode": "^1.62.0",
     "@types/mocha": "^10.0.2",
     "@types/node": "18.x",
     "eslint": "^8.50.0",
