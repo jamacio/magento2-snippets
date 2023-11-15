@@ -21,7 +21,8 @@
     "prefix": "m2.object_manager",
     "body": [
       "\\$objectManager = \\Magento\\Framework\\App\\ObjectManager::getInstance();",
-      "\\$object = \\$objectManager->create(${1:m2.cls}::class);"
+      "\\$object = \\$objectManager->create(${1:m2.cls}::class);",
+      "// note: Magento does not recommend using ObjectManager in production"
     ]
   },
   "logger": {
@@ -29,7 +30,8 @@
     "body": [
       "\\$objectManager = \\Magento\\Framework\\App\\ObjectManager::getInstance();",
       "\\$logger = \\$objectManager->create(\\Psr\\Log\\LoggerInterface::class);",
-      "\\$logger->info(\"\");"
+      "\\$logger->info(\"\");",
+      "// note: Magento does not recommend using ObjectManager in production"
     ]
   },
   "log_custom": {
@@ -60,7 +62,8 @@
       "     echo 'Customer Name: ' . \\$customerSession->getCustomer()->getName() . '<br/>';",
       "     echo 'Customer Email: ' . \\$customerSession->getCustomer()->getEmail() . '<br/>';",
       "     echo 'Customer Group Id: ' .  \\$customerSession->getCustomer()->getGroupId() . '<br/>';",
-      " }"
+      " }",
+      "// note: Magento does not recommend using ObjectManager in production"
     ]
   },
   "new_session_catalog": {
@@ -71,7 +74,8 @@
       "// set session variables and their value",
       "\\$catalogSession->setMyValue('I Love Magento2');",
       "// print session variables value",
-      "echo \\$catalogSession->getMyValue();"
+      "echo \\$catalogSession->getMyValue();",
+      "// note: Magento does not recommend using ObjectManager in production"
     ],
     "description": "Factory class for products in Magento"
   },
@@ -83,7 +87,8 @@
       "// set session variables and their value",
       "\\$customerSession->setMyValue('I Love Magento2');",
       "// print session variables value",
-      "echo \\$customerSession->getMyValue();"
+      "echo \\$customerSession->getMyValue();",
+      "// note: Magento does not recommend using ObjectManager in production"
     ]
   },
   "new_session_checkout": {
@@ -94,7 +99,8 @@
       "// set session variables and their value",
       "\\$checkoutSession->setMyValue('I Love Magento2');",
       "// print session variables value",
-      "echo \\$checkoutSession->getMyValue();"
+      "echo \\$checkoutSession->getMyValue();",
+      "// note: Magento does not recommend using ObjectManager in production"
     ]
   },
   "list_products": {
@@ -316,6 +322,24 @@
       "\\$order = \\$objectManager->create('\\Magento\\Sales\\Model\\Order')->load(\\$orderId);",
       "echo \\$order->getIncrementId();"
  ,"// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Get an order by ID"
+  },
+  "get_core_config_data": {
+    "prefix": "m2.get_core_config_data",
+    "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      "\\$scopeConfig = \\$objectManager->get('Magento\\Framework\\App\\Config\\ScopeConfigInterface');",
+      "echo \\$scopeConfig->getValue('${0:you\\custom\\path}', \\Magento\\Store\\Model\\ScopeInterface::SCOPE_STORES);",
+      "// note: Magento does not recommend using ObjectManager in production" ],
+    "description": "Get an order by ID"
+  },
+  "set_core_config_data": {
+    "prefix": "m2.set_core_config_data",
+    "body": [
+      "\\$objectManager =  \\Magento\\Framework\\App\\ObjectManager::getInstance();",
+      "\\$scopeConfig = \\$objectManager->get('Magento\\Framework\\App\\Config\\ScopeConfigInterface');",
+      "echo \\$scopeConfig->saveConfig('${0:you\\custom\\path}', 'value_to_insert' , \\Magento\\Store\\Model\\ScopeInterface::SCOPE_STORES, 0);",
+      "// note: Magento does not recommend using ObjectManager in production" ],
     "description": "Get an order by ID"
   },
   "create_cart": {

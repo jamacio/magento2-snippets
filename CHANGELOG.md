@@ -4,6 +4,12 @@ All notable changes to the "php-magento2-snippets" extension will be documented 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.10]
+
+### Changed
+
+- Adding autocomplete class 
+
 ## [0.0.9]
 
 ### Changed
